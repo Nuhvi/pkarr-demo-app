@@ -1,0 +1,4 @@
+.netlify
+.parcel*
+dist
+node_modules
