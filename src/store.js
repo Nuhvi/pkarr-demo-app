@@ -28,6 +28,10 @@ const store = createMutable({
    * @param {import('dns-packet').Answer[]} records
    */
   updateRecords(records) {
+    localStorage.setItem('records', JSON.stringify(records))
+
+    records = store.getrecords()
+
     const packet = {
       id: 0,
       type: 'response',
@@ -37,12 +41,22 @@ const store = createMutable({
 
     this.recordsSize = encodedPacket.length || 0
 
-    localStorage.setItem('records', JSON.stringify(records))
+  },
+
+  getrecords() {
+    try {
+      let json = localStorage.getItem('records')
+      let records = JSON.parse(json)
+      return records.filter(rr => rr.name && rr.data);
+    } catch (error) {
+      console.log(error);
+      return []
+    }
   },
 
   publish() {
     const keyPair = { ...this.keyPair }
-    const records = store.records.map(r => ({ ...r }))
+    const records = store.getrecords()
     const relays = [...this.relays]
 
     this.publishing = true

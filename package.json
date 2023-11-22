@@ -13,6 +13,7 @@
   },
   "devDependencies": {
     "babel-preset-solid": "^1.2.5",
+    "buffer": "^6.0.3",
     "parcel": "^2.0.1",
     "solid-refresh": "^0.2.2"
   }
