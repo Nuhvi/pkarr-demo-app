@@ -2,7 +2,8 @@ import { Pkarr, z32, dns, SignedPacket } from 'pkarr';
 import { createMutable } from 'solid-js/store';
 
 const DEFAULT_RELAYS = [
-  'https://relay.pkarr.org'
+  'https://relay.pkarr.org',
+  'https://pkarr.pubky.org'
 ]
 
 const store = createMutable({
