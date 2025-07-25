@@ -96,7 +96,7 @@ const App = () => {
           <li>Paste any of your friend's keys in the Resolve tab to get their latest records.</li>
           <li>You need to republish your records every hour or so, otherwise they will be dropped from the DHT.</li>
           <li>Anyone can republish your records, and you can republish your friends records too.</li>
-          <li>Open settings to add or remove relays, you can also <a href="https://github.com/Nuhvi/pkarr/tree/main/server" target="_blank">run your own relay</a>.</li>
+          <li>Open settings to add or remove relays, you can also <a href="https://github.com/Nuhvi/pkarr/tree/main/relay" target="_blank">run your own relay</a>.</li>
           <li>Open settings to export, import, or regenerate new seed.</li>
           <li>It is safe to edit your records from multiple devices, but some changes might be lost.</li>
         </ul>
